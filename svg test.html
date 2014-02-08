@@ -187,7 +187,7 @@
 
 <script>
 var id1, id2;
-var road = false, middle = false, lane = false, obs = false, sign = false, unimp = false, imp = false, sign = false, text = false;
+var road = false, middle = false, lane = false, obs = false, sign = false, unimp = false, imp = false, text = false;
 
 function roadClick(){
 	var element = document.getElementById("road_line_button");
@@ -205,8 +205,23 @@ function selectDot(id){
 	
 	if(road){
 		roadLine(id);
+	}else if(middle){
+		middleLine(id);
+	}else if(lane){
+		laneLine(id);
+	}else if(obs){
+		obsBlock(id);
+	}else if(sign){
+		signBlock(id);
+	}else if(unimp){
+		unimpBlock(id);
+	}else if(imp){
+		impBlock(id);
+	}else if(text){
+		textBlock(id);
+	}else{
+		element.style.fill="#cccccc";
 	}
-	
 	
 }
 
