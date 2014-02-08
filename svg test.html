@@ -171,38 +171,29 @@
 	<rect id="pt167" height="10" width="10" y="620" x="520" fill="#cccccc" onclick="selectDot(id)"/>
 	<rect id="pt168" height="10" width="10" y="620" x="570" fill="#cccccc" onclick="selectDot(id)"/>
 	<rect id="pt169" height="10" width="10" y="620" x="620" fill="#cccccc" onclick="selectDot(id)"/>
-	<line id="line1" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(0,0,0);stroke-width:2" />
+	<polyline id="line1"  style="fill:none;stroke:black;stroke-width:4;stroke-dasharray:10,10" />
 </svg>
   
 
 <script>
-var id1, id2
+var id2
+var N = 0;
+var plinePts = new Array();
 function selectDot(id){
 	var element = document.getElementById(id);
-	if (id1 == null){
-		id1 = id;
-	} else{
-		id2 = id;
-	}
+	id2 = id
 	element.style.fill="black";
 
-	if (id1 != null && id2 != null){
-		var element1 = document.getElementById(id1);
+	if (id2 != null){
 		var element2 = document.getElementById(id2);
-		var X1 = element1.getAttribute('x').toString();
-		var Y1 = element1.getAttribute('y').toString();
 		var X2 = element2.getAttribute('x').toString();
 		var Y2 = element2.getAttribute('y').toString();
+		plinePts[N] = X2+","+Y2+" "
+		line1.setAttribute("points", plinePts.join())
 		
-		line1.setAttribute("x1",X1);
-		line1.setAttribute("y1",Y1);
-		line1.setAttribute("x2",X2);
-		line1.setAttribute("y2",Y2);
-		
-		document.getElementById(id1).style.fill="gray";
 		document.getElementById(id2).style.fill="gray";
-		id1 = null;
 		id2 = null;
+		N+=1
 	}
 }
 
@@ -224,6 +215,8 @@ else
   }
 }
 </script>
+
+<button type="button" onclick="B+1">Road Lines</button>
 
 </body>
 </html>
