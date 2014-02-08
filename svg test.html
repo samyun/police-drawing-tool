@@ -2,7 +2,6 @@
 <html>
 <body>
   <svg width="640" height="640" xmlns="http://www.w3.org/2000/svg">
-	
 	  <rect fill="#cccccc" x="20" y="20" width="10" height="10" id="pt1"/>
 	  <rect fill="#cccccc" x="70" y="20" width="10" height="10" id="pt2"/>
 	  <rect fill="#cccccc" x="120" y="20" width="10" height="10" id="pt3"/>
@@ -171,16 +170,15 @@
 	  <rect fill="#cccccc" x="470" y="620" width="10" height="10" id="pt166"/>
 	  <rect fill="#cccccc" x="520" y="620" width="10" height="10" id="pt167"/>
 	  <rect fill="#cccccc" x="570" y="620" width="10" height="10" id="pt168"/>
-	  <rect onclick=selectDot(pt169) fill="#cccccc" x="620" y="620" width="10" height="10" id="pt169"/>
-	
+	  <rect fill="#cccccc" x="620" y="620" width="10" height="10" id="pt169"/>
 </svg>
   
 
-<button onclick=selectDot(pt169)>Click to highlight grey</button>
+<button onclick="selectDot()">Click to highlight grey</button>
 
 <script>
-function selectDot(id){
-var element = document.getElementById(id);
+function selectDot(){
+var element = document.getElementById('pt168');
 element.style.fill="black";
 
 }
