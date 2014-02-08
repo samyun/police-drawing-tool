@@ -1,0 +1,37 @@
+<html>
+<body>
+<script>
+var SVG=function(h,w){
+ var NS="http://www.w3.org/2000/svg";
+ var svg=document.createElementNS(NS,"svg");
+ svg.width=w;
+ svg.height=h;
+ return svg;
+}
+
+var svg=SVG(640,640);
+document.body.appendChild(svg);
+
+
+var rect=function(h,w,fill,x,y){
+ var NS="http://www.w3.org/2000/svg";
+ var SVGObj= document.createElementNS(NS,"rect");
+ SVGObj.width.baseVal.value=w;
+ SVGObj.height.baseVal.value=h;
+ SVGObj.setAttribute("height",h);
+ SVGObj.style.fill=fill;
+ SVGObj.x.baseVal.value=x;
+ SVGObj.y.baseVal.value=y;
+
+ return SVGObj;
+}
+var pt1= rect(10,10, "grey",20,20);
+svg.appendChild(pt1);
+pt1.style.fill="black";
+
+</script>
+
+
+
+</body>
+</html>
