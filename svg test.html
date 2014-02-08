@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <svg width="800" height="700" xmlns="http://www.w3.org/2000/svg">
+  <svg width="900" height="700" xmlns="http://www.w3.org/2000/svg">
 	<g id="navi">
-		<rect id="road_line_button" x="670" y="10" width="100" height="25" stroke="black" fill="none" stroke-width="3" onclick="roadClick()"/>
-		<text id="road_line_button_text" x="680" y="28" font-family="Comic Sans MS, cursive, sans-serif" font-size="16" fill="black" onclick="roadClick()">Road Lines</text>
-	   </g>
+		<rect id="road_line_button" x="670" y="10" width="200" height="40" stroke="black" fill="none" stroke-width="3" onclick="roadClick()"/>
+		<text id="road_line_button_text" x="720" y="35" font-family="Comic Sans MS, cursive, sans-serif" font-size="20" fill="black" onclick="roadClick()">Road Lines</text>
+		<rect id="lane_line_button" x="670" y="60" width="200" height="40" stroke="black" fill="none" stroke-width="3" onclick="laneClick()"/>
+		<text id="lane_line_button_text" x="720" y="85" font-family="Comic Sans MS, cursive, sans-serif" font-size="20" fill="black" onclick="laneClick()">Lane Lines</text>
+		<rect id="middle_line_button" x="670" y="110" width="200" height="40" stroke="black" fill="none" stroke-width="3" onclick="middleClick()"/>
+		<text id="middle_line_button_text" x="710" y="135" font-family="Comic Sans MS, cursive, sans-serif" font-size="20" fill="black" onclick="middleClick()">Middle Lines</text>
+		<rect id="involv_block_button" x="670" y="160" width="200" height="40" stroke="black" fill="none" stroke-width="3" onclick="invClick()"/>
+		<text id="involv_block_button_text" x="690" y="185" font-family="Comic Sans MS, cursive, sans-serif" font-size="20" fill="black" onclick="invClick()">Involved Vehicles</text>
+		<rect id="uninv_block_button" x="670" y="210" width="200" height="40" stroke="black" fill="none" stroke-width="3" onclick="uninvClick()"/>
+		<text id="uninv_block_button_text" x="680" y="235" font-family="Comic Sans MS, cursive, sans-serif" font-size="20" fill="black" onclick="uninvClick()">Uninvolved Vehicles</text>
+		<rect id="sign_block_button" x="670" y="260" width="200" height="40" stroke="black" fill="none" stroke-width="3" onclick="signClick()"/>
+		<text id="sign_block_button_text" x="720" y="285" font-family="Comic Sans MS, cursive, sans-serif" font-size="20" fill="black" onclick="signClick()">Road Signs</text>
+		<rect id="obs_block_button" x="670" y="310" width="200" height="40" stroke="black" fill="none" stroke-width="3" onclick="obsClick()"/>
+		<text id="obs_block_button_text" x="690" y="335" font-family="Comic Sans MS, cursive, sans-serif" font-size="20" fill="black" onclick="obsClick()">Obstacles</text>
+	</g>
 	
 	<g id="grid">
 		<rect id="pt1" height="10" width="10" y="20" x="20" fill="#cccccc" onclick="selectDot(id)"/>
