@@ -1578,12 +1578,13 @@ function uninvBlock(id){
 
 function textBlock(id){
 	var element1 = document.getElementById(id);
-	var X1 = element1.getAttribute('x').toString();
-	var Y1 = element1.getAttribute('y').toString();
+	var X1 = parseFloat(element1.getAttribute('x'));
+	var Y1 = parseFloat(element1.getAttribute('y'));
 	var Notes = prompt("Enter notes:")
-	texty.setAttribute('x',X1);
-	texty.setAttribute('y',Y1);
+	texty.setAttribute('x',(X1+5).toString());
+	texty.setAttribute('y',(Y1-5).toString());
 	texty.textContent = Notes;
+	texty.setAttribute('font-family',"Comic Sans MS, cursive, sans-serif")
 		texty=document.getElementById("text" + h.toString());
 		h++;
 
@@ -1629,3 +1630,4 @@ function selectDir(id){
 
 </body>
 </html>
+0
