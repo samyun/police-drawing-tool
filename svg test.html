@@ -290,18 +290,18 @@ function selectDot(id){
 	
 	if(road){
 		roadLine(id);
-	}else if(middle){
-		middleLine(id);
 	}else if(lane){
 		laneLine(id);
-	}else if(obs){
-		obsBlock(id);
-	}else if(sign){
-		signBlock(id);
+	}else if(middle){
+		middleLine(id);
 	}else if(unimp){
 		unimpBlock(id);
 	}else if(imp){
 		impBlock(id);
+	}else if(sign){
+		signBlock(id);
+	}else if(obs){
+		obsBlock(id);
 	}else if(text){
 		textBlock(id);
 	}else{
