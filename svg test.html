@@ -23,6 +23,19 @@
 		<text id="path_line_button_text" x="720" y="435" font-family="Comic Sans MS, cursive, sans-serif" font-size="20" fill="black" onclick="pathClick()">Motion Path</text>
 		
 	</g>
+
+	<g id="direc">
+		<circle cx="775" cy="560" r="75" fill="none" stroke="black" stroke-width="5"/>
+		<rect id="dir1" height="10" width="10" y="480" x="770" fill="red" onclick="selectDir(id)"/>
+		<rect id="dir2" height="10" width="10" y="502" x="823" fill="red" onclick="selectDir(id)"/>
+		<rect id="dir3" height="10" width="10" y="555" x="845" fill="red" onclick="selectDir(id)"/>
+		<rect id="dir4" height="10" width="10" y="608" x="823" fill="red" onclick="selectDir(id)"/>
+		<rect id="dir5" height="10" width="10" y="630" x="770" fill="red" onclick="selectDir(id)"/>
+		<rect id="dir6" height="10" width="10" y="608" x="717" fill="red" onclick="selectDir(id)"/>
+		<rect id="dir7" height="10" width="10" y="555" x="695" fill="red" onclick="selectDir(id)"/>
+		<rect id="dir8" height="10" width="10" y="502" x="717" fill="red" onclick="selectDir(id)"/>
+		<line id="Arrow" x1="0" y1="0" x2="0" y2="0" style="stroke:blue;stroke-weight:5"/>
+	</g>
 	
 	<g id="grid">
 		<rect id="pt1" height="10" width="10" y="20" x="20" fill="#cccccc" onclick="selectDot(id)"/>
@@ -1602,6 +1615,15 @@ function pathLine(id){
 		id1 = null;
 		id2 = null;
 	}
+}
+function selectDir(id){
+	var element = document.getElementById(id);
+	var X = element.getAttribute('x').toString();
+	var Y = element.getAttribute('y').toString();
+	Arrow.setAttribute('x2', X);
+	Arrow.setAttribute('y2', Y);
+	Arrow.setAttribute('x1', "775")
+	Arrow.setAttribute('y1',"560")
 }
 </script>
 
