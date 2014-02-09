@@ -26,4 +26,5 @@ Changelog
 ===================
 
 1.01: Add favicon and update Readme.
+
 1.0: Initial release.
