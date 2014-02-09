@@ -11,16 +11,27 @@ Contents
 ===================
 
 SVG create grid: contains Java files to create SVG entries.
+
 Police Drawing.xdk: Intel XDK files
+
 Police Drawing.xdke: Intel XDK files
+
 REAMDME.md: readme file
+
 favicon.ico: favicon
+
 grid.svg: svg of 13x13 grid
+
 images.svg: Grid plus road line button
+
 police.html: final code
+
 sample svg.html: working code to compare svg syntax
+
 svg test.html: testbed to test code and bugfixes
+
 svg.html: make a grid using svg patterns.  
+
 
 Changelog
 ===================
