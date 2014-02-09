@@ -16,7 +16,7 @@
 		<rect id="sign_block_button" x="670" y="260" width="200" height="40" stroke="black" fill="none" stroke-width="3" onclick="signClick()"/>
 		<text id="sign_block_button_text" x="720" y="285" font-family="Comic Sans MS, cursive, sans-serif" font-size="20" fill="black" onclick="signClick()">Road Signs</text>
 		<rect id="obs_block_button" x="670" y="310" width="200" height="40" stroke="black" fill="none" stroke-width="3" onclick="obsClick()"/>
-		<text id="obs_block_button_text" x="690" y="335" font-family="Comic Sans MS, cursive, sans-serif" font-size="20" fill="black" onclick="obsClick()">Obstacles</text>
+		<text id="obs_block_button_text" x="730" y="335" font-family="Comic Sans MS, cursive, sans-serif" font-size="20" fill="black" onclick="obsClick()">Obstacles</text>
 	</g>
 	
 	<g id="grid">
@@ -199,12 +199,72 @@
 
 <script>
 var id1, id2;
-var road = false, middle = false, lane = false, obs = false, sign = false, unimp = false, imp = false, text = false;
+var road = false, middle = false, lane = false, obs = false, sign = false, uninv = false, inv = false, text = false;
 
 function roadClick(){
 	var element = document.getElementById("road_line_button");
 	road = !road;
 	if (road){
+		element.style.fill="gray";
+	}else{
+		element.style.fill="none";
+	}
+}
+
+function laneClick(){
+	var element = document.getElementById("lane_line_button");
+	lane = !lane;
+	if (lane){
+		element.style.fill="gray";
+	}else{
+		element.style.fill="none";
+	}
+}
+
+function middleClick(){
+	var element = document.getElementById("middle_line_button");
+	middle = !middle;
+	if (middle){
+		element.style.fill="gray";
+	}else{
+		element.style.fill="none";
+	}
+}
+
+function invClick(){
+	var element = document.getElementById("involv_block_button");
+	inv = !inv;
+	if (inv){
+		element.style.fill="gray";
+	}else{
+		element.style.fill="none";
+	}
+}
+
+function uninvClick(){
+	var element = document.getElementById("uninv_block_button");
+	uninv = !uninv;
+	if (uninv){
+		element.style.fill="gray";
+	}else{
+		element.style.fill="none";
+	}
+}
+
+function signClick(){
+	var element = document.getElementById("sign_block_button");
+	sign = !sign;
+	if (sign){
+		element.style.fill="gray";
+	}else{
+		element.style.fill="none";
+	}
+}
+
+function obsClick(){
+	var element = document.getElementById("obs_block_button");
+	obs = !obs;
+	if (obs){
 		element.style.fill="gray";
 	}else{
 		element.style.fill="none";
