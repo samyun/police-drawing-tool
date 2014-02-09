@@ -539,9 +539,7 @@ var id1, id2;
 var road = false, middle = false, lane = false, obs = false, sign = false, uninv = false, inv = false, text = false, path =false;
 
 var roadln;
-var b=0;
-roadln=document.getElementById("road_line").childNodes[0].nextSibling;
-alert(roadln);
+roadln=document.getElementById("road0");
 
 
 function roadClick(){
@@ -823,10 +821,12 @@ function roadLine(id){
 		var Y1 = element1.getAttribute('y').toString();
 		var X2 = element2.getAttribute('x').toString();
 		var Y2 = element2.getAttribute('y').toString();
-		roadln[b].setAttribute("x1",X1);
-		roadln[b].setAttribute("y1",Y1);
-		roadln[b].setAttribute("x2",X2);
-		roadln[b].setAttribute("y2",Y2);
+		roadln.setAttribute("x1",X1);
+		roadln.setAttribute("y1",Y1);
+		roadln.setAttribute("x2",X2);
+		roadln.setAttribute("y2",Y2);
+		roadln.nextSibling.nextSibling;
+		alert(roadln.id);
 		
 		document.getElementById(id1).style.fill="gray";
 		document.getElementById(id2).style.fill="gray";
