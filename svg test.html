@@ -532,13 +532,13 @@
 var id1, id2;
 var road = false, middle = false, lane = false, obs = false, sign = false, uninv = false, inv = false, text = false;
 
-var roadLine=new Array();
+var roadln=new Array();
 rl=0;
 
-var laneLine=new Array();
+var laneln=new Array();
 ll=0;
 
-var middleLine=new Array();
+var middleln=new Array();
 ml=0;
 
 function roadClick(){
@@ -554,6 +554,14 @@ function roadClick(){
 		document.getElementById("sign_block_button").style.fill="none";
 		document.getElementById("obs_block_button").style.fill="none";
 		document.getElementById("text_block_button").style.fill="none";
+	
+		middle = false;
+		lane = false;
+		inv = false;
+		uninv = false;
+		sign = false;
+		obs = false;
+		text = false;
 	}else{
 		element.style.fill="none";
 	}
@@ -571,6 +579,14 @@ function laneClick(){
 		document.getElementById("sign_block_button").style.fill="none";
 		document.getElementById("obs_block_button").style.fill="none";
 		document.getElementById("text_block_button").style.fill="none";
+		middle = false;
+		road = false;
+		inv = false;
+		uninv = false;
+		sign = false;
+		obs = false;
+		text = false;
+	
 	}else{
 		element.style.fill="none";
 	}
@@ -588,6 +604,14 @@ function middleClick(){
 		document.getElementById("sign_block_button").style.fill="none";
 		document.getElementById("obs_block_button").style.fill="none";
 		document.getElementById("text_block_button").style.fill="none";	
+		lane = false;
+		road = false;
+		inv = false;
+		uninv = false;
+		sign = false;
+		obs = false;
+		text = false;	
+	
 	}else{
 		element.style.fill="none";
 	}
@@ -605,6 +629,13 @@ function invClick(){
 		document.getElementById("sign_block_button").style.fill="none";
 		document.getElementById("obs_block_button").style.fill="none";
 		document.getElementById("text_block_button").style.fill="none";
+		lane = false;
+		road = false;
+		middle = false;
+		uninv = false;
+		sign = false;
+		obs = false;
+		text = false;
 	}else{
 		element.style.fill="none";
 	}
@@ -622,6 +653,13 @@ function uninvClick(){
 		document.getElementById("sign_block_button").style.fill="none";
 		document.getElementById("obs_block_button").style.fill="none";
 		document.getElementById("text_block_button").style.fill="none";
+		lane = false;
+		road = false;
+		middle = false;
+		inv = false;
+		sign = false;
+		obs = false;
+		text = false;
 	
 	}else{
 		element.style.fill="none";
@@ -640,7 +678,14 @@ function signClick(){
 		document.getElementById("uninv_block_button").style.fill="none";
 		document.getElementById("obs_block_button").style.fill="none";
 		document.getElementById("text_block_button").style.fill="none";
-
+		lane = false;
+		road = false;
+		middle = false;
+		inv = false;
+		uninv = false;
+		obs = false;
+		text = false;
+	
 	}else{
 		element.style.fill="none";
 	}
@@ -658,7 +703,13 @@ function obsClick(){
 		document.getElementById("uninv_block_button").style.fill="none";
 		document.getElementById("sign_block_button").style.fill="none";
 		document.getElementById("text_block_button").style.fill="none";
-
+		lane = false;
+		road = false;
+		middle = false;
+		inv = false;
+		uninv = false;
+		sign = false;
+		text = false;
 	}else{
 		element.style.fill="none";
 	}
@@ -676,7 +727,12 @@ function textClick(){
 		document.getElementById("uninv_block_button").style.fill="none";
 		document.getElementById("sign_block_button").style.fill="none";
 		document.getElementById("obs_block_button").style.fill="none";
-	
+		road = false;
+		middle = false;
+		inv = false;
+		uninv = false;
+		sign = false;
+		obs = false;	
 	}else{
 		element.style.fill="none";
 	}
@@ -711,12 +767,9 @@ function selectDot(id){
 
 function roadLine(id){
 	if (id1 == null){
-			alert("foo");
-
 		id1 = id;
 	} else{
 		id2 = id;
-		alert("foo1");
 	}
 	if (id1 != null && id2 != null){
 		var element1 = document.getElementById(id1);
