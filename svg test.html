@@ -538,14 +538,11 @@
 var id1, id2;
 var road = false, middle = false, lane = false, obs = false, sign = false, uninv = false, inv = false, text = false, path =false;
 
-var roadln=new Array();
-rl=0;
+var roadln;
+var b=0;
+roadln=document.getElementById("road_line").childNodes[0].nextSibling;
+alert(roadln);
 
-var laneln=new Array();
-ll=0;
-
-var middleln=new Array();
-ml=0;
 
 function roadClick(){
 	var element = document.getElementById("road_line_button");
@@ -826,10 +823,10 @@ function roadLine(id){
 		var Y1 = element1.getAttribute('y').toString();
 		var X2 = element2.getAttribute('x').toString();
 		var Y2 = element2.getAttribute('y').toString();
-		road0.setAttribute("x1",X1);
-		road0.setAttribute("y1",Y1);
-		road0.setAttribute("x2",X2);
-		road0.setAttribute("y2",Y2);
+		roadln[b].setAttribute("x1",X1);
+		roadln[b].setAttribute("y1",Y1);
+		roadln[b].setAttribute("x2",X2);
+		roadln[b].setAttribute("y2",Y2);
 		
 		document.getElementById(id1).style.fill="gray";
 		document.getElementById(id2).style.fill="gray";
