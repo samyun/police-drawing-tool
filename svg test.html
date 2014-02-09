@@ -538,8 +538,14 @@
 var id1, id2;
 var road = false, middle = false, lane = false, obs = false, sign = false, uninv = false, inv = false, text = false, path =false;
 
-var roadln;
-roadln=document.getElementById("road0");
+var roadln=document.getElementById("road0");
+var a = 1;
+
+var laneln = document.getElementById("lane0");
+var b = 1;
+
+var middleln = document.getElementById("middle0");
+var c = 1;
 
 
 function roadClick(){
@@ -825,8 +831,9 @@ function roadLine(id){
 		roadln.setAttribute("y1",Y1);
 		roadln.setAttribute("x2",X2);
 		roadln.setAttribute("y2",Y2);
-		roadln.nextSibling.nextSibling;
-		alert(roadln.id);
+		
+		roadln=document.getElementById("road" + a.toString());
+		a++;
 		
 		document.getElementById(id1).style.fill="gray";
 		document.getElementById(id2).style.fill="gray";
@@ -848,10 +855,13 @@ function laneLine(id){
 		var Y1 = element1.getAttribute('y').toString();
 		var X2 = element2.getAttribute('x').toString();
 		var Y2 = element2.getAttribute('y').toString();
-		lane1.setAttribute("x1",X1);
-		lane1.setAttribute("y1",Y1);
-		lane1.setAttribute("x2",X2);
-		lane1.setAttribute("y2",Y2);
+		laneln.setAttribute("x1",X1);
+		laneln.setAttribute("y1",Y1);
+		laneln.setAttribute("x2",X2);
+		laneln.setAttribute("y2",Y2);
+		
+		laneln=document.getElementById("lane" + b.toString());
+		b++;
 		
 		document.getElementById(id1).style.fill="gray";
 		document.getElementById(id2).style.fill="gray";
@@ -874,10 +884,13 @@ function middleLine(id){
 		var Y1 = element1.getAttribute('y').toString();
 		var X2 = element2.getAttribute('x').toString();
 		var Y2 = element2.getAttribute('y').toString();
-		line2.setAttribute("x1",X1);
-		line2.setAttribute("y1",Y1);
-		line2.setAttribute("x2",X2);
-		line2.setAttribute("y2",Y2);
+		middleln.setAttribute("x1",X1);
+		middleln.setAttribute("y1",Y1);
+		middleln.setAttribute("x2",X2);
+		middleln.setAttribute("y2",Y2);
+		
+		middleln=document.getElementById("middle" + c.toString());
+		c++;
 		
 		document.getElementById(id1).style.fill="gray";
 		document.getElementById(id2).style.fill="gray";
