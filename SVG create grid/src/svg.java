@@ -20,27 +20,25 @@ public final class svg {
      */
     public static void main(String[] args) {
 
-        int xmax = 640, ymax = 640, y = 20, x = 20, i = 0;
-        int[] xlist = new int[13 * 13];
-        int[] ylist = new int[13 * 13];
-        while (y < ymax) {
-            while (x < xmax) {
-                xlist[i] = x;
-                ylist[i] = y;
-                i++;
-                x = x + 50;
-            }
-            x = 20;
-            y = y + 50;
-        }
+        /*
+         * int xmax = 640, ymax = 640, y = 20, x = 20, i = 0; int[] xlist = new
+         * int[13 * 13]; int[] ylist = new int[13 * 13]; while (y < ymax) {
+         * while (x < xmax) { xlist[i] = x; ylist[i] = y; i++; x = x + 50; } x =
+         * 20; y = y + 50; }
+         */
+        //make code for grid
+        /*
+         * for (int k = 0; k < i; k++) { System.out.println("<rect id=\"pt" + (k
+         * + 1) + "\" height=\"10\" width=\"10\" y=\"" + ylist[k] + "\" x=\"" +
+         * xlist[k] + "\" fill=\"#cccccc\" onclick=\"selectDot(id)\"/>"); }
+         */
 
-        for (int k = 0; k < i; k++) {
-            System.out.println("<rect id=\"pt" + (k + 1)
-                    + "\" height=\"10\" width=\"10\" y=\"" + ylist[k]
-                    + "\" x=\"" + xlist[k]
-                    + "\" fill=\"#cccccc\" onclick=\"selectDot(id)\"/>");
-        }
+        for (int i = 0; i <= 100; i++) {
 
+            System.out.println("<polygon id=\"uninv" + i
+                    + "\" style=\"fill:purple\"/>");
+
+        }
     }
 
 }
