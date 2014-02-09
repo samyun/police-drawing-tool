@@ -37,6 +37,19 @@
 		<line id="Arrow" x1="0" y1="0" x2="0" y2="0" style="stroke:blue;stroke-weight:5"/>
 	</g>
 	
+	<g id="direc">
+		<circle cx="775" cy="560" r="75" fill="none" stroke="black" stroke-width="5"/>
+		<rect id="dir1" height="10" width="10" y="480" x="770" fill="red" onclick="selectDir(id)"/>
+		<rect id="dir2" height="10" width="10" y="502" x="823" fill="red" onclick="selectDir(id)"/>
+		<rect id="dir3" height="10" width="10" y="555" x="845" fill="red" onclick="selectDir(id)"/>
+		<rect id="dir4" height="10" width="10" y="608" x="823" fill="red" onclick="selectDir(id)"/>
+		<rect id="dir5" height="10" width="10" y="630" x="770" fill="red" onclick="selectDir(id)"/>
+		<rect id="dir6" height="10" width="10" y="608" x="717" fill="red" onclick="selectDir(id)"/>
+		<rect id="dir7" height="10" width="10" y="555" x="695" fill="red" onclick="selectDir(id)"/>
+		<rect id="dir8" height="10" width="10" y="502" x="717" fill="red" onclick="selectDir(id)"/>
+		<line id="Arrow" x1="0" y1="0" x2="0" y2="0" style="stroke:blue;stroke-weight:5"/>
+	</g>
+
 	<g id="grid">
 		<rect id="pt1" height="10" width="10" y="20" x="20" fill="#cccccc" onclick="selectDot(id)"/>
 		<rect id="pt2" height="10" width="10" y="20" x="70" fill="#cccccc" onclick="selectDot(id)"/>
@@ -934,6 +947,7 @@
 <polygon id="uninv100" style="fill:purple"/>	</g>
 
 	<g id="text">
+<<<<<<< HEAD
 <text id="text0" style="fill:black"></text>
 <text id="text1" style="fill:black"></text>
 <text id="text2" style="fill:black"></text>
@@ -1035,6 +1049,10 @@
 <text id="text98" style="fill:black"></text>
 <text id="text99" style="fill:black"></text>
 <text id="text100" style="fill:black"></text>	</g>
+=======
+		<text id="text1" fill="black" font-family="Comic Sans MS, cursive, sans-serif"></text>
+	</g>
+>>>>>>> test
 
 	<g id="path">
 <line id="path0" x1="0" y1="0" x2="0" y2="0" style="stroke:green;stroke-width:3;stroke-dasharray:2,2" />
@@ -1581,12 +1599,18 @@ function textBlock(id){
 	var X1 = parseFloat(element1.getAttribute('x'));
 	var Y1 = parseFloat(element1.getAttribute('y'));
 	var Notes = prompt("Enter notes:")
+<<<<<<< HEAD
 	texty.setAttribute('x',(X1+5).toString());
 	texty.setAttribute('y',(Y1-5).toString());
 	texty.textContent = Notes;
 	texty.setAttribute('font-family',"Comic Sans MS, cursive, sans-serif")
 		texty=document.getElementById("text" + h.toString());
 		h++;
+=======
+	text1.setAttribute('x',(X1+5).toString());
+	text1.setAttribute('y',(Y1-5).toString());
+	text1.textContent = Notes;
+>>>>>>> test
 
 }
 
@@ -1617,6 +1641,10 @@ function pathLine(id){
 		id2 = null;
 	}
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> test
 function selectDir(id){
 	var element = document.getElementById(id);
 	var X = element.getAttribute('x').toString();
