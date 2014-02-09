@@ -525,7 +525,7 @@
 	</g>
 
 	<g id="text">
-		<text id="text1" fill="black"></text>
+		<text id="text1" fill="black" font-family="Comic Sans MS, cursive, sans-serif"></text>
 	</g>
 
 	<g id="path">
@@ -939,11 +939,11 @@ function uninvBlock(id){
 
 function textBlock(id){
 	var element1 = document.getElementById(id);
-	var X1 = element1.getAttribute('x').toString();
-	var Y1 = element1.getAttribute('y').toString();
+	var X1 = parseFloat(element1.getAttribute('x'));
+	var Y1 = parseFloat(element1.getAttribute('y'));
 	var Notes = prompt("Enter notes:")
-	text1.setAttribute('x',X1);
-	text1.setAttribute('y',Y1);
+	text1.setAttribute('x',(X1+5).toString());
+	text1.setAttribute('y',(Y1-5).toString());
 	text1.textContent = Notes;
 
 }
