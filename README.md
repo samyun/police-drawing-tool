@@ -36,6 +36,8 @@ svg.html: make a grid using svg patterns.
 Changelog
 ===================
 
+1.1: Move arrow to center of points.
+
 1.01: Add favicon and update Readme.
 
 1.0: Initial release.

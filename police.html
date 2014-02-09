@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>doge, by the CSIA Group</title>
-	<link rel="icon" 
-      type="image/ico" 
-      href="http://samsyun.com/favicon.ico">
-</head>
 <body>
   <svg width="900" height="650" xmlns="http://www.w3.org/2000/svg">
 	<g id="navi">
@@ -1456,14 +1450,14 @@ function roadLine(id){
 	if (id1 != null && id2 != null){
 		var element1 = document.getElementById(id1);
 		var element2 = document.getElementById(id2);
-		var X1 = element1.getAttribute('x').toString();
-		var Y1 = element1.getAttribute('y').toString();
-		var X2 = element2.getAttribute('x').toString();
-		var Y2 = element2.getAttribute('y').toString();
-		roadln.setAttribute("x1",X1);
-		roadln.setAttribute("y1",Y1);
-		roadln.setAttribute("x2",X2);
-		roadln.setAttribute("y2",Y2);
+		var X1 = parseFloat(element1.getAttribute('x'));
+		var Y1 = parseFloat(element1.getAttribute('y'));
+		var X2 = parseFloat(element2.getAttribute('x'));
+		var Y2 = parseFloat(element2.getAttribute('y'));
+		roadln.setAttribute("x1",(X1+5).toString());
+		roadln.setAttribute("y1",(Y1+5).toString());
+		roadln.setAttribute("x2",(X2+5).toString());
+		roadln.setAttribute("y2",(Y2+5).toString());
 		
 		roadln=document.getElementById("road" + a.toString());
 		a++;
@@ -1484,14 +1478,14 @@ function laneLine(id){
 	if (id1 != null && id2 != null){
 		var element1 = document.getElementById(id1);
 		var element2 = document.getElementById(id2);
-		var X1 = element1.getAttribute('x').toString();
-		var Y1 = element1.getAttribute('y').toString();
-		var X2 = element2.getAttribute('x').toString();
-		var Y2 = element2.getAttribute('y').toString();
-		laneln.setAttribute("x1",X1);
-		laneln.setAttribute("y1",Y1);
-		laneln.setAttribute("x2",X2);
-		laneln.setAttribute("y2",Y2);
+		var X1 = parseFloat(element1.getAttribute('x'));
+		var Y1 = parseFloat(element1.getAttribute('y'));
+		var X2 = parseFloat(element2.getAttribute('x'));
+		var Y2 = parseFloat(element2.getAttribute('y'));
+		laneln.setAttribute("x1",(X1+5).toString());
+		laneln.setAttribute("y1",(Y1+5).toString());
+		laneln.setAttribute("x2",(X2+5).toString());
+		laneln.setAttribute("y2",(Y2+5).toString());
 		
 		laneln=document.getElementById("lane" + b.toString());
 		b++;
@@ -1513,14 +1507,14 @@ function middleLine(id){
 	if (id1 != null && id2 != null){
 		var element1 = document.getElementById(id1);
 		var element2 = document.getElementById(id2);
-		var X1 = element1.getAttribute('x').toString();
-		var Y1 = element1.getAttribute('y').toString();
-		var X2 = element2.getAttribute('x').toString();
-		var Y2 = element2.getAttribute('y').toString();
-		middleln.setAttribute("x1",X1);
-		middleln.setAttribute("y1",Y1);
-		middleln.setAttribute("x2",X2);
-		middleln.setAttribute("y2",Y2);
+		var X1 = parseFloat(element1.getAttribute('x'));
+		var Y1 = parseFloat(element1.getAttribute('y'));
+		var X2 = parseFloat(element2.getAttribute('x'));
+		var Y2 = parseFloat(element2.getAttribute('y'));
+		middleln.setAttribute("x1",(X1+5).toString());
+		middleln.setAttribute("y1",(Y1+5).toString());
+		middleln.setAttribute("x2",(X2+5).toString());
+		middleln.setAttribute("y2",(Y2+5).toString());
 		
 		middleln=document.getElementById("middle" + c.toString());
 		c++;
@@ -1608,14 +1602,14 @@ function pathLine(id){
 	if (id1 != null && id2 != null){
 		var element1 = document.getElementById(id1);
 		var element2 = document.getElementById(id2);
-		var X1 = element1.getAttribute('x').toString();
-		var Y1 = element1.getAttribute('y').toString();
-		var X2 = element2.getAttribute('x').toString();
-		var Y2 = element2.getAttribute('y').toString();
-		motionph.setAttribute("x1",X1);
-		motionph.setAttribute("y1",Y1);
-		motionph.setAttribute("x2",X2);
-		motionph.setAttribute("y2",Y2);
+		var X1 = parseFloat(element1.getAttribute('x'));
+		var Y1 = parseFloat(element1.getAttribute('y'));
+		var X2 = parseFloat(element2.getAttribute('x'));
+		var Y2 = parseFloat(element2.getAttribute('y'));
+		motionph.setAttribute("x1",(X1+5).toString());
+		motionph.setAttribute("y1",(Y1+5).toString());
+		motionph.setAttribute("x2",(X2+5).toString());
+		motionph.setAttribute("y2",(Y2+5).toString());
 		
 		motionph=document.getElementById("path" + q.toString());
 		q++;
@@ -1628,10 +1622,10 @@ function pathLine(id){
 
 function selectDir(id){
 	var element = document.getElementById(id);
-	var X = element.getAttribute('x').toString();
-	var Y = element.getAttribute('y').toString();
-	Arrow.setAttribute('x2', X);
-	Arrow.setAttribute('y2', Y);
+	var X = parseFloat(element.getAttribute('x'));
+	var Y = parseFloat(element.getAttribute('y'));
+	Arrow.setAttribute('x2', (X+5).toString());
+	Arrow.setAttribute('y2', (Y+5).toString());
 	Arrow.setAttribute('x1', "775")
 	Arrow.setAttribute('y1',"560")
 }
