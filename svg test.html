@@ -197,6 +197,30 @@
 	<g id="road_line">
 		<line id="line0" x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(0,0,0);stroke-width:2" />
 	</g>
+
+	<g id="lane_line">
+		<line id="line1" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:2;stroke-dasharray:10,10" />
+	</g>
+
+	<g id="middle_line">
+		<line id="line2" x1="0" y1="0" x2="0" y2="0" style="stroke:gold;stroke-width:4" />
+	</g>
+
+	<g id="road_sign">
+		<polygon id="shape1" style="stroke:red; fill:red" />
+	</g>
+
+	<g id="obstacle">
+		<polygon id="shape2" style="fill:brown" />
+	</g>
+
+	<g id="inv_block">
+		<polygon id="shape3" style="fill:blue" />
+	</g>
+
+	<g id="uninv_block">
+		<polygon id="shape4" style="fill:purple" />
+	</g>
 	</svg>
   
 
@@ -292,6 +316,7 @@ function selectDot(id){
 		roadLine(id);
 	}else if(lane){
 		laneLine(id);
+<<<<<<< HEAD
 	}else if(middle){
 		middleLine(id);
 	}else if(unimp){
@@ -302,6 +327,16 @@ function selectDot(id){
 		signBlock(id);
 	}else if(obs){
 		obsBlock(id);
+=======
+	}else if(obs){
+		obsBlock(id);
+	}else if(sign){
+		signBlock(id);
+	}else if(uninv){
+		uninvBlock(id);
+	}else if(inv){
+		invBlock(id);
+>>>>>>> Symbols complete (minus text entry)
 	}else if(text){
 		textBlock(id);
 	}else{
@@ -336,9 +371,106 @@ function roadLine(id){
 	}
 }
 
+function laneLine(id){
+	if (id1 == null){
+		id1 = id;
+	} else{
+		id2 = id;
+	}
 
+	if (id1 != null && id2 != null){
+		var element1 = document.getElementById(id1);
+		var element2 = document.getElementById(id2);
+		var X1 = element1.getAttribute('x').toString();
+		var Y1 = element1.getAttribute('y').toString();
+		var X2 = element2.getAttribute('x').toString();
+		var Y2 = element2.getAttribute('y').toString();
+		line1.setAttribute("x1",X1);
+		line1.setAttribute("y1",Y1);
+		line1.setAttribute("x2",X2);
+		line1.setAttribute("y2",Y2);
+		
+		document.getElementById(id1).style.fill="gray";
+		document.getElementById(id2).style.fill="gray";
+		id1 = null;
+		id2 = null;
+	}
+}
+
+function middleLine(id){
+	if (id1 == null){
+		id1 = id;
+	} else{
+		id2 = id;
+	}
+
+	if (id1 != null && id2 != null){
+		var element1 = document.getElementById(id1);
+		var element2 = document.getElementById(id2);
+		var X1 = element1.getAttribute('x').toString();
+		var Y1 = element1.getAttribute('y').toString();
+		var X2 = element2.getAttribute('x').toString();
+		var Y2 = element2.getAttribute('y').toString();
+		line2.setAttribute("x1",X1);
+		line2.setAttribute("y1",Y1);
+		line2.setAttribute("x2",X2);
+		line2.setAttribute("y2",Y2);
+		
+		document.getElementById(id1).style.fill="gray";
+		document.getElementById(id2).style.fill="gray";
+		id1 = null;
+		id2 = null;
+	}
+}
+
+function signBlock(id){
+	var element1 = document.getElementById(id);
+	var X1 = parseFloat(element1.getAttribute('x'));
+	var Y1 = parseFloat(element1.getAttribute('y'));
+	X1+=6.5;
+	Y1+=6.5;
+	var vertices = (X1).toString()+","+(Y1+13.53).toString()+" "+(X1).toString()+","+(Y1+32.66).toString()+" "+(X1+13.53).toString()+","+(Y1+46.19).toString()+" "+(X1+32.66).toString()+","+(Y1+46.19).toString()+" "+(X1+46.19).toString()+","+(Y1+32.66).toString()+" "+(X1+46.19).toString()+","+(Y1+13.53).toString()+" "+(X1+32.66).toString()+","+(Y1).toString()+" "+(X1+13.53).toString()+","+(Y1).toString();
+	shape1.setAttribute("points", vertices);
+	document.getElementById(id).style.fill="gray";
+	
+}
+
+function obsBlock(id){
+	var element1 = document.getElementById(id);
+	var X1 = parseFloat(element1.getAttribute('x'));
+	var Y1 = parseFloat(element1.getAttribute('y'));
+	X1+=6.5;
+	Y1+=6.5;
+	var vertices = (X1).toString()+","+(Y1+22.5).toString()+" "+(X1+50).toString()+","+(Y1+22.5).toString()+" "+(X1+35).toString()+","+(Y1+7.5).toString()+" "+(X1+15).toString()+","+(Y1+7.5).toString()
+	shape2.setAttribute("points", vertices);
+	document.getElementById(id).style.fill="gray";
+	
+}
+
+function invBlock(id){
+	var element1 = document.getElementById(id);
+	var X1 = parseFloat(element1.getAttribute('x'));
+	var Y1 = parseFloat(element1.getAttribute('y'));
+	X1+=6.5;
+	Y1+=6.5;
+	var vertices = (X1).toString()+","+(Y1+10).toString()+" "+(X1).toString()+","+(Y1+40).toString()+" "+(X1+50).toString()+","+(Y1+40).toString()+" "+(X1+50).toString()+","+(Y1+10).toString()
+	shape3.setAttribute("points", vertices);
+	document.getElementById(id).style.fill="gray";
+	
+}
+
+function uninvBlock(id){
+	var element1 = document.getElementById(id);
+	var X1 = parseFloat(element1.getAttribute('x'));
+	var Y1 = parseFloat(element1.getAttribute('y'));
+	X1+=6.5;
+	Y1+=6.5;
+	var vertices = (X1).toString()+","+(Y1+10).toString()+" "+(X1).toString()+","+(Y1+40).toString()+" "+(X1+50).toString()+","+(Y1+40).toString()+" "+(X1+50).toString()+","+(Y1+10).toString()
+	shape4.setAttribute("points", vertices);
+	document.getElementById(id).style.fill="gray";
+	
+}
 </script>
 
 </body>
 </html>
-
