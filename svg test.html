@@ -16,7 +16,10 @@
 		<rect id="sign_block_button" x="670" y="260" width="200" height="40" stroke="black" fill="none" stroke-width="3" onclick="signClick()"/>
 		<text id="sign_block_button_text" x="720" y="285" font-family="Comic Sans MS, cursive, sans-serif" font-size="20" fill="black" onclick="signClick()">Road Signs</text>
 		<rect id="obs_block_button" x="670" y="310" width="200" height="40" stroke="black" fill="none" stroke-width="3" onclick="obsClick()"/>
-		<text id="obs_block_button_text" x="730" y="335" font-family="Comic Sans MS, cursive, sans-serif" font-size="20" fill="black" onclick="obsClick()">Obstacles</text>
+		<text id="obs_block_button_text" x="725" y="335" font-family="Comic Sans MS, cursive, sans-serif" font-size="20" fill="black" onclick="obsClick()">Obstacles</text>
+		<rect id="text_block_button" x="670" y="360" width="200" height="40" stroke="black" fill="none" stroke-width="3" onclick="textClick()"/>
+		<text id="text_block_button_text" x="720" y="385" font-family="Comic Sans MS, cursive, sans-serif" font-size="20" fill="black" onclick="textClick()">Text Entry</text>
+		
 	</g>
 	
 	<g id="grid">
@@ -265,6 +268,16 @@ function obsClick(){
 	var element = document.getElementById("obs_block_button");
 	obs = !obs;
 	if (obs){
+		element.style.fill="gray";
+	}else{
+		element.style.fill="none";
+	}
+}
+
+function textClick(){
+	var element = document.getElementById("text_block_button");
+	text = !text;
+	if (text){
 		element.style.fill="gray";
 	}else{
 		element.style.fill="none";
